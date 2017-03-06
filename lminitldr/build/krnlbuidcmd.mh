@@ -1,0 +1,31 @@
+###################################################################
+#		krnlbuidcmd自动化编译配置文件 Makefile		  #
+#				彭东  ＠ 2012.08.15.10.20	  #
+###################################################################
+
+ASM		= nasm
+CC		= gcc
+LD		= ld
+DD		= dd 
+RM		= rm
+LDRIMG		= ./lmoskrlimg
+ASMBFLAGS	= -I $(HEADFILE_PATH) -f elf
+ASMKFLAGS	= -I $(HEADFILE_PATH) -f elf64  #-mregparm=0-finline-functions-mcmodel=medium -mcmodel=large 
+BTCFLAGS	= -I $(HEADFILE_PATH) -c -Os -std=c99 -m32 -Wall -Wshadow -save-temps -W -Wconversion -Wno-sign-conversion  -fno-stack-protector -fomit-frame-pointer -fno-builtin -fno-common  -fno-ident -ffreestanding  -fno-stack-protector -fomit-frame-pointer -Wno-unused-parameter -Wunused-variable
+CFLAGS	= -I $(HEADFILE_PATH) -c -O2 -m64  -mcmodel=large -mno-red-zone -std=c99 -Wall -Wshadow -save-temps  -W -Wconversion -Wno-sign-conversion -fno-stack-protector  -fomit-frame-pointer -fno-builtin -fno-common  -fno-ident -ffreestanding  -Wno-unused-parameter -Wunused-variable #-fdata-sections -gstabs+
+CPPFLGSLDS	= $(HEADFILE_PATH) -E -P 
+CSCFLAGS = -I $(HEADFILE_PATH) -c   -fno-builtin -fno-common -fno-stack-protector -fno-ident -ffreestanding
+SCFLAGS	= -I $(HEADFILE_PATH) -S  -std=c99 -fno-ident -Wall -fno-builtin -fno-common -fno-stack-protector
+LDFLAGS		= -s -static -T boot.lds -n  -Map boot.map --oformat binary
+FDLDRLDFLG	= -s -Ttext 0 -n  -Map fdldr.map --oformat binary
+LOADERLDFLAGS	= -s -T ldrld.lds -n  -Map hdldr.map  --oformat binary
+LDRIMHLDFLAGS = -s -T lmosldrimh.lds -n  -Map lmosldrimh.map  --oformat binary
+LDRKRLLDFLAGS = -s -T lmosldrkrl.lds -n  -Map lmosldrkrl.map  --oformat binary
+LDRSVELDFLAGS = -s -T lmosldrsve.lds -n  -Map lmosldrsve.map  --oformat binary
+LDRIMGFLAGS = -m k
+KERNELLDFLAGS	= -s -static -T kernelld.lds -n  -Map kernel.map --oformat binary #--entry=_start#-Ttext 0x500 target remote localhost:1234
+
+DBGKERNELLDFLAGS	= -static -T kernelld.lds -n  -Map kernel.map #--entry=_start#-Ttext 0x500 target remote localhost:1234
+
+INITSHELLLDFLAGS = -s -static -T app.lds -n  -Map initshellldr.map --oformat binary
+

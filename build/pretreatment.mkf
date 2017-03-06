@@ -1,0 +1,42 @@
+MAKEFLAGS = -s
+CCSTR		= 	'CC -[M] 正在生成makefile... '$<
+PRINTCSTR 	=	@echo $(CCSTR) 
+
+CCSTRLMK	= 	'LMKFBUID -[M] 正在生成makefile... '$<
+PRINTCSTRLMK 	=	@echo $(CCSTRLMK) 
+
+
+KERNELCE_PATH	= ../script/
+HEADFILE_PATH = -I ../include/script/ -I ../include/ -I ../include/bastypeinc -I ../include/halinc
+CCBUILDPATH	= $(KERNELCE_PATH)
+LMKFBUID = ./lmkfbuild
+CC		= gcc
+CPPFLGSLDS	= $(HEADFILE_PATH) -E -P 
+
+PREMENTMKI_OBJS = krnlobjs.mki lmemknllink.lds krnlbuidcmd.mki krnlbuidrule.mki lmosemhal.mki lmosemkrl.mki lmosemdrv.mki lmosemlib.mki lmosemtask.mki lmosemlink.mki
+PREMENTMK_OBJS = krnlobjs.mk krnlbuidcmd.mk krnlbuidrule.mk lmosemhal.mk lmosemkrl.mk lmosemdrv.mk lmosemlib.mk lmosemtask.mk lmosemlink.mk
+.PHONY : all everything everymk build_kernel
+all: build_kernel
+
+build_kernel:everything everymk
+
+everything : $(PREMENTMKI_OBJS) 
+
+everymk : $(PREMENTMK_OBJS)
+
+
+%.lds : $(CCBUILDPATH)%.S
+	$(CC) $(CPPFLGSLDS) -o $@ $<
+	$(PRINTCSTR)
+
+%.mkh : $(CCBUILDPATH)%.S
+	$(CC) $(CPPFLGSLDS) -o $@ $<
+	$(PRINTCSTR)
+
+%.mki : $(CCBUILDPATH)%.S
+	$(CC) $(CPPFLGSLDS) -o $@ $<
+	$(PRINTCSTR)
+
+%.mk : %.mki
+	$(LMKFBUID) -i $< -o $@
+	$(PRINTCSTRLMK)

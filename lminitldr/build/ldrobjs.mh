@@ -1,0 +1,17 @@
+LMOSLDRIMH_OBJS :=
+LMOSLDRIMH_LINK :=
+LMOSLDRIMH_OBJS += imginithead.btoj inithead.btoj vgastr.btoj
+LMOSLDRIMH_LINK += $(LMOSLDRIMH_OBJS)
+LMOSLDRIMH = lmldrimh.bin
+
+LMOSLDRKRL_OBJS :=
+LMOSLDRKRL_LINK :=
+LMOSLDRKRL_OBJS += ldrkrl32.btoj ldrkrlentry.btoj fs.btoj chkcpmm.btoj graph.btoj bstartparm.btoj
+LMOSLDRKRL_LINK += $(LMOSLDRKRL_OBJS) vgastr.btoj
+LMOSLDRKRL = lmldrkrl.bin
+
+LMOSLDRSVE_OBJS :=
+LMOSLDRSVE_LINK :=
+LMOSLDRSVE_OBJS += realintsve.btoj
+LMOSLDRSVE_LINK += $(LMOSLDRSVE_OBJS)
+LMOSLDRSVE = lmldrsve.bin

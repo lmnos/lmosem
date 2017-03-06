@@ -1,0 +1,35 @@
+MAKEFLAGS = -sR
+.PHONY : all moutvmhd clean idectrnul crtidectr stratvm tranvdi moutraw
+
+all: moutraw tranvdi idectrnul crtidectr moutvmhd stratvm
+
+createvm:
+	VBoxManage createvm --name LMOSEM -register
+
+crtidectr:
+	VBoxManage storagectl LMOSEM --name "IDE" --add ide --controller PIIX4
+
+idectrnul:
+	VBoxManage storagectl LMOSEM --name "IDE" --remove 
+
+moutvmhd:
+	VBoxManage closemedium disk ../exckrnl/lmos.vdi
+	VBoxManage storageattach LMOSEM --storagectl "IDE" --port 0 --device 0 --type hdd --medium ../exckrnl/lmos.vdi
+	
+stratvm:
+	VBoxManage startvm LMOSEM
+
+tranvdi:
+	VBoxManage convertfromraw ../lmosdisk.vmd --format VDI ../exckrnl/lmos.vdi
+
+moutraw:
+	sudo mount -o loop ../lmosdisk.vmd ../lmosdisk/
+	sudo cp ../release/lmosemkrnl.eki ../lmosdisk/boot/
+	sudo umount ../lmosdisk/
+
+#cinfgvm: idectrnul crtidectr moutvmhd stratvm
+	
+	
+#disk|dvd|floppy <uuid>|<filename>[]--delete
+# [--medium none|emptydrive|	
+#VBoxManage storagectl lmos-00.03 --name "IDE Controller" --medium "none"
