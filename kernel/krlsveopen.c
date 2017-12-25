@@ -28,10 +28,10 @@ hand_t krlsve_open(void* file,uint_t flgs,uint_t stus)
 
 hand_t krlsve_core_open(void* file,uint_t flgs,uint_t stus)
 {
-    devid_t devid;
-    device_t* devp;
-    objnode_t* ondp;
-    hand_t rethd;
+    devid_t devid={0,0,0};
+    device_t* devp=NULL;
+    objnode_t* ondp=NULL;
+    hand_t rethd=NO_HAND;
     thread_t* tdp=krlsched_retn_currthread();
     if(((flgs&FILE_TY_MASK)==FILE_TY_DEV))
     {

@@ -79,19 +79,9 @@ LKHEAD_T void init_hal()
 
     init_paltform();
     move_lmosimg2maxpadr(&kmachbsp);
-    //init_haluart();
-    //init_halmach();
     init_halmm();
     init_halintupt();
-    //print_mach(&osmach);
-    //print_mmapdsc(&osmach);
-    //disp_mbspex(&kmachbsp);
-    //printfk("LMOSEM IS RUN\n");
-    //init_8254();
     init_i8259();
     i8259_enabled_line(0);
-    //STI();
-    //for(;;);
-    //test_blkmm();
     return;
 }

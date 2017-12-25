@@ -8,6 +8,9 @@ CC		= gcc
 LD		= ld
 DD		= dd 
 RM		= rm
+OBJCOPY = objcopy
+OJCYFLAGS = -S -O binary
+
 LDRIMG		= ./lmoskrlimg
 ASMBFLAGS	= -I $(HEADFILE_PATH) -f elf
 ASMKFLAGS	= -I $(HEADFILE_PATH) -f elf64  #-mregparm=0-finline-functions-mcmodel=medium -mcmodel=large 
@@ -16,16 +19,16 @@ CFLAGS	= -I $(HEADFILE_PATH) -c -O2 -m64  -mcmodel=large -mno-red-zone -std=c99 
 CPPFLGSLDS	= $(HEADFILE_PATH) -E -P 
 CSCFLAGS = -I $(HEADFILE_PATH) -c   -fno-builtin -fno-common -fno-stack-protector -fno-ident -ffreestanding
 SCFLAGS	= -I $(HEADFILE_PATH) -S  -std=c99 -fno-ident -Wall -fno-builtin -fno-common -fno-stack-protector
-LDFLAGS		= -s -static -T boot.lds -n  -Map boot.map --oformat binary
-FDLDRLDFLG	= -s -Ttext 0 -n  -Map fdldr.map --oformat binary
-LOADERLDFLAGS	= -s -T ldrld.lds -n  -Map hdldr.map  --oformat binary
-LDRIMHLDFLAGS = -s -T lmosldrimh.lds -n  -Map lmosldrimh.map  --oformat binary
-LDRKRLLDFLAGS = -s -T lmosldrkrl.lds -n  -Map lmosldrkrl.map  --oformat binary
-LDRSVELDFLAGS = -s -T lmosldrsve.lds -n  -Map lmosldrsve.map  --oformat binary
+LDFLAGS		= -s -static -T boot.lds -n  -Map boot.map 
+FDLDRLDFLG	= -s -Ttext 0 -n  -Map fdldr.map 
+LOADERLDFLAGS	= -s -T ldrld.lds -n  -Map hdldr.map  
+LDRIMHLDFLAGS = -s -T lmosldrimh.lds -n  -Map lmosldrimh.map
+LDRKRLLDFLAGS = -s -T lmosldrkrl.lds -n  -Map lmosldrkrl.map  
+LDRSVELDFLAGS = -s -T lmosldrsve.lds -n  -Map lmosldrsve.map 
 LDRIMGFLAGS = -m k
-KERNELLDFLAGS	= -s -static -T kernelld.lds -n  -Map kernel.map --oformat binary #--entry=_start#-Ttext 0x500 target remote localhost:1234
+KERNELLDFLAGS	= -s -static -T kernelld.lds -n  -Map kernel.map #--entry=_start#-Ttext 0x500 target remote localhost:1234
 
 DBGKERNELLDFLAGS	= -static -T kernelld.lds -n  -Map kernel.map #--entry=_start#-Ttext 0x500 target remote localhost:1234
 
-INITSHELLLDFLAGS = -s -static -T app.lds -n  -Map initshellldr.map --oformat binary
+INITSHELLLDFLAGS = -s -static -T app.lds -n  -Map initshellldr.map
 

@@ -3,15 +3,22 @@ include ldrobjs.mh
 .PHONY : all everything build_kernel
 all: build_kernel 
 #LMOSLDR
-build_kernel:everything
-everything : $(LMOSLDRIMH) $(LMOSLDRKRL) $(LMOSLDRSVE)
+build_kernel:everything build_bin
+everything : $(LMOSLDRIMH_ELF) $(LMOSLDRKRL_ELF) $(LMOSLDRSVE_ELF)
+build_bin:$(LMOSLDRIMH) $(LMOSLDRKRL) $(LMOSLDRSVE)
 
-$(LMOSLDRIMH): $(LMOSLDRIMH_LINK)
+$(LMOSLDRIMH_ELF): $(LMOSLDRIMH_LINK)
 	$(LD) $(LDRIMHLDFLAGS) -o $@ $(LMOSLDRIMH_LINK)
-$(LMOSLDRKRL): $(LMOSLDRKRL_LINK)
+$(LMOSLDRKRL_ELF): $(LMOSLDRKRL_LINK)
 	$(LD) $(LDRKRLLDFLAGS) -o $@ $(LMOSLDRKRL_LINK)
-$(LMOSLDRSVE): $(LMOSLDRSVE_LINK)
+$(LMOSLDRSVE_ELF): $(LMOSLDRSVE_LINK)
 	$(LD) $(LDRSVELDFLAGS) -o $@ $(LMOSLDRSVE_LINK)
-
-LMOSLDR:
-	$(LDRIMG) $(LDRIMGFLAGS) -lhf $(LMOSLDRIMH) -o lmoskrnl.eki -f $(LMOSLDRKRL) $(LMOSLDRSVE) lmoskrnl lmosinitshell
+$(LMOSLDRIMH):$(LMOSLDRIMH_ELF)
+	$(OBJCOPY) $(OJCYFLAGS) $< $@
+	@echo 'OBJCOPY -[M] 正在构建...' $@  
+$(LMOSLDRKRL):$(LMOSLDRKRL_ELF)
+	$(OBJCOPY) $(OJCYFLAGS) $< $@
+	@echo 'OBJCOPY -[M] 正在构建...' $@ 
+$(LMOSLDRSVE):$(LMOSLDRSVE_ELF)
+	$(OBJCOPY) $(OJCYFLAGS) $< $@
+	@echo 'OBJCOPY -[M] 正在构建...' $@ 

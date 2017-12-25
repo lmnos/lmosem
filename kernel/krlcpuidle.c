@@ -27,7 +27,6 @@ void krlcpuidle_start()
     tdp->td_context.ctx_nxttss->ss0=K_DS_IDX;
 #endif
     tdp->td_stus=TDSTUS_RUN;
-    intstkregs_t* arp=(intstkregs_t*)tdp->td_context.ctx_nxtesp;
     retnfrom_first_sched(tdp);
     return;
 }

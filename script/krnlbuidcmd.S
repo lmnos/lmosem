@@ -10,12 +10,13 @@ CC		= gcc
 LD		= ld
 DD		= dd
 RM		= rm # -ld -lgcc  $(LIBPATH)-mcmodel=large
-OBJCOPY		= objcopy
 OYFLAGS		= -O binary
 CFLAGS      = $(HEADFILE_PATH) -c -O2 -m32 -mtune=generic -mno-red-zone -std=c99 -Wall -Wshadow -save-temps  -W -Wconversion -Wno-sign-conversion -fno-stack-protector  -fomit-frame-pointer -fno-builtin -fno-common  -fno-ident -ffreestanding  -Wno-unused-parameter -Wunused-variable
-LDFLAGS		= -s -static -T lmemknllink.lds -n -Map lmos_em.map --oformat binary
+LDFLAGS		= -s -static -T lmemknllink.lds -n -Map lmos_em.map
 CPPFLGSLDS	= $(HEADFILE_PATH) -E -P 
 ASMFLGS		= $(HEADFILE_PATH) -f elf
+OBJCOPY = objcopy
+OJCYFLAGS = -S -O binary
 
 #else
 

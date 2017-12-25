@@ -78,7 +78,7 @@ x32:
 	$(MAKE) $(X86LINKMFLGS)
 	@echo '恭喜我，系统编译构建完成！ ^_^'
 clean:
-	$(CD) $(BUILD_PATH); $(RM) -f *.o *.bin *.i *.krnl *.s *.map *.lib *.btoj *.vdi *vmdk *.eki #krnlobjs.mh
+	$(CD) $(BUILD_PATH); $(RM) -f *.o *.bin *.i *.krnl *.s *.map *.lib *.btoj *.vdi *vmdk *.eki *.elf #krnlobjs.mh
 	#$(CD) $(EXKNL_PATH); $(RM) -f *.o *.bin *.i *.krnl *.s *.map *.lib *.btoj *.vdi *vmdk krnlobjs.mh
 	@echo '清理全部已构建文件... ^_^'
 
