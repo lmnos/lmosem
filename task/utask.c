@@ -1,5 +1,5 @@
 #include "stdio.h"
-
+void printfk(const char* fmt,...);
 void usr_write_file()
 {
 
@@ -10,7 +10,7 @@ void usr_write_file()
     }
     for(int i=0;i<512;i++)
     {
-        buf[i]=0xff;
+        buf[i]=(char)0xff;
     }
     if(open("/file.bin",NF_FLG|FILE_TY_FILE,0)==-1)
     {
@@ -62,7 +62,7 @@ void usr_read_file()
     }
     for(int j=0;j<512;j++)
     {
-        if(buf[j]!=0xff)
+        if(buf[j]!=(char)0xff)
         {
             goto err;
         }
@@ -130,7 +130,7 @@ void task0_main()
 
 void task2_main()
 {
-    times_t timet;
+    /*times_t timet;
     timet.year=14;
     timet.mon=9;
     timet.day=4;
@@ -138,7 +138,7 @@ void task2_main()
     timet.date=11;
     timet.hour=12;
     timet.min=30;
-    timet.sec=00;
+    timet.sec=00;*/
 
     //settime(&timet);
     int i=0;

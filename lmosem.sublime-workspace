@@ -1,0 +1,1319 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"size",
+				"size_t"
+			],
+			[
+				"build",
+				"build_bin"
+			],
+			[
+				"LMOSLDRSVE_",
+				"LMOSLDRSVE_ELF"
+			],
+			[
+				"LMOSLDRKRL_",
+				"LMOSLDRKRL_ELF"
+			],
+			[
+				"LMOSLDRIMH_",
+				"LMOSLDRIMH_ELF"
+			],
+			[
+				"a",
+				"allcport"
+			],
+			[
+				"ret",
+				"retindx"
+			],
+			[
+				"re",
+				"retindx"
+			],
+			[
+				"p",
+				"portindx"
+			],
+			[
+				"po",
+				"portEnd"
+			],
+			[
+				"port",
+				"portStart"
+			],
+			[
+				"por",
+				"portEnd"
+			],
+			[
+				"s",
+				"setPortIndx"
+			],
+			[
+				"pr",
+				"portindx"
+			],
+			[
+				"st",
+				"start"
+			],
+			[
+				"i",
+				"int"
+			],
+			[
+				"in",
+				"indx"
+			],
+			[
+				"lm",
+				"lmos_run_init"
+			],
+			[
+				"k",
+				"kprint"
+			],
+			[
+				"AR",
+				"ARCH_DEFGLOB_VARIABLE"
+			],
+			[
+				"l",
+				"ldbinfo"
+			],
+			[
+				"ldi_l",
+				"ldi_dr1ladr"
+			],
+			[
+				"ldi_dr",
+				"ldi_dr7ctrl"
+			],
+			[
+				"ldi_e",
+				"ldi_sseflgs"
+			],
+			[
+				"ldi",
+				"ldi_flags"
+			],
+			[
+				"ld",
+				"ldip"
+			],
+			[
+				"h",
+				"i_handle_t"
+			],
+			[
+				"lmo",
+				"lmosimgfs"
+			],
+			[
+				"b",
+				"build_bin"
+			],
+			[
+				"BUILD_MK_FDBT_",
+				"BUILD_MK_FDBT_ELF"
+			],
+			[
+				"O",
+				"OBJCOPY"
+			],
+			[
+				"e",
+				"elf"
+			],
+			[
+				"ma",
+				"mareap\tmemarea_t*"
+			],
+			[
+				"mm_",
+				"mm_update_memarea(memarea_t *malokp, u64_t pgnr, uint_t flgs)\tvoid"
+			],
+			[
+				"m",
+				"malokp\tmemarea_t*"
+			],
+			[
+				"rel",
+				"relbfl\tbafhlst_t*"
+			],
+			[
+				"mm_re",
+				"mm_retnmsaob_onbafhlst(bafhlst_t *bafhp, msadsc_t **retmstat, msadsc_t **retmend)\tbool_t"
+			],
+			[
+				"PAF",
+				"PAF_ALLOC\tmacro"
+			],
+			[
+				"MF",
+				"MF_UINDX_INIT\tmacro"
+			],
+			[
+				"me",
+				"mend\tmsadsc_t*"
+			],
+			[
+				"MF_",
+				"MF_UINDX_INIT\tmacro"
+			],
+			[
+				"mm",
+				"mm_divpages_opmsadsc"
+			],
+			[
+				"mm_rel",
+				"mm_reldivpages_onmarea(memarea_t *malckp, u64_t pages, u64_t *retrelpnr)\tmsadsc_t *"
+			],
+			[
+				"retm",
+				"retmstat\tmsadsc_t*"
+			],
+			[
+				"div",
+				"divnr\tu64_t"
+			],
+			[
+				"d",
+				"divnr\tu64_t"
+			],
+			[
+				"marea",
+				"memarea_t\ttypedef"
+			],
+			[
+				"c",
+				"chek_all_one_mchkstuc"
+			],
+			[
+				"ck",
+				"chek_all_mchkstuc"
+			],
+			[
+				"kpint",
+				"kprint(const char_t *fmt, ...)\tvoid"
+			],
+			[
+				"dm",
+				"dmchs"
+			],
+			[
+				"ch",
+				"chek_one_mchks"
+			],
+			[
+				"sys",
+				"system_error(char_t *errstr)\tvoid"
+			],
+			[
+				"mch",
+				"mchkstuc_t\ttypedef"
+			],
+			[
+				"list_for",
+				"list_for_each(pos, head)\tmacro"
+			],
+			[
+				"writ",
+				"write_one_mchkstuc(msadsc_t *msa, u64_t pnr)\tvoid"
+			],
+			[
+				"phy",
+				"phyadr\tu64_t"
+			],
+			[
+				"mc_ck",
+				"mc_chkadr\tu64_t*"
+			],
+			[
+				"mm_div",
+				"mm_division_pages(memmgrob_t *mmobjp, u64_t pages, u64_t *retrealpnr, u64_t mrtype, u64_t flgs)\tmsadsc_t *"
+			],
+			[
+				"list",
+				"list_is_empty_careful(const list_h_t *head)\tbool_t"
+			],
+			[
+				"ms",
+				"msastat\tmsadsc_t*"
+			],
+			[
+				"af",
+				"af_aobjnr\tu64_t"
+			],
+			[
+				"msa",
+				"msastat\tmsadsc_t*"
+			],
+			[
+				"af_",
+				"af_oderpnr"
+			],
+			[
+				"DMF",
+				"DMF_RELDIV\tmacro"
+			],
+			[
+				"mr",
+				"mrdmb_add_msa_bafh"
+			],
+			[
+				"N",
+				"NULL\tmacro"
+			],
+			[
+				"mm_divi",
+				"mm_divipages_onbafhlst(bafhlst_t *bafhp)\tmsadsc_t *"
+			],
+			[
+				"onm",
+				"onmpgs_retn_bafhlst(memarea_t *malckp, u64_t pages, bafhlst_t **retrelbafh, bafhlst_t **retdivbafh)\tbool_t"
+			],
+			[
+				"MD",
+				"MDIVMER_ARR_LMAX\tmacro"
+			],
+			[
+				"retb",
+				"retdivbafh\tbafhlst_t**"
+			],
+			[
+				"MA",
+				"MDIVMER_ARR_LMAX\tmacro"
+			],
+			[
+				"MDIV",
+				"MDIVMER_ARR_OMAX\tmacro"
+			],
+			[
+				"scan",
+				"scan_mapgsalloc_ok(memarea_t *malckp, u64_t pages)\tbool_t"
+			],
+			[
+				"lis",
+				"list_add(list_h_t *)\tvoid"
+			],
+			[
+				"MA_",
+				"MA_TYPE_KRNL\tmacro"
+			],
+			[
+				"mm_up",
+				"mm_update_memmgrob(u64_t realpnr)\tvoid"
+			],
+			[
+				"knl_spin",
+				"knl_spinunlock_sti(spinlock_t *lock, cpuflg_t *cpuflg)\tvoid"
+			],
+			[
+				"rea",
+				"realpnr\tu64_t"
+			],
+			[
+				"lmos",
+				"lmos_memmgrob\tmemmgrob_t"
+			],
+			[
+				"cpu",
+				"cpuflg_t\ttypedef"
+			],
+			[
+				"t",
+				"tmp\tmsadsc_t*"
+			],
+			[
+				"msad",
+				"msadsc_t\ttypedef"
+			],
+			[
+				"li",
+				"list_is_empty_careful(const list_h_t *head)\tbool_t"
+			],
+			[
+				"knl_spi",
+				"knl_spinlock_cli(spinlock_t *lock, cpuflg_t *cpuflg)\tvoid"
+			],
+			[
+				"mem",
+				"memarea_t\ttypedef"
+			],
+			[
+				"no",
+				"nomrtype_retn_marea(memmgrob_t *mmobjp, u64_t mrtype)\tmemarea_t *"
+			],
+			[
+				"mo_f",
+				"mo_freepages\tu64_t"
+			],
+			[
+				"mo_",
+				"mo_alocpages\tu64_t"
+			],
+			[
+				"mb",
+				"mb_memmapnr\tu64_t"
+			],
+			[
+				"mo",
+				"mo_memsz\tu64_t"
+			],
+			[
+				"krnl",
+				"krnlphyiadr_to_viradr(adr_t kphyadr)\tadr_t"
+			],
+			[
+				"mb_memz",
+				"mb_memznpadr"
+			],
+			[
+				"mb_m",
+				"mb_memznnr\tu64_t"
+			],
+			[
+				"knl_se",
+				"knl_sem_init(sem_t *sem_p, s32_t sem_val, u32_t sem_flg)\tvoid"
+			],
+			[
+				"knl_s",
+				"knl_spinlock_init(spinlock_t *lock)\tvoid"
+			],
+			[
+				"ini",
+				"init_memmgr"
+			],
+			[
+				"check",
+				"check_one_memarea"
+			],
+			[
+				"lin",
+				"lindx\tu64_t"
+			],
+			[
+				"md",
+				"md_odlink\tvoid *"
+			],
+			[
+				"MF_O",
+				"MF_OLKTY_ODER\tmacro"
+			],
+			[
+				"u",
+				"u64_t\ttypedef"
+			],
+			[
+				"ma_m",
+				"ma_mdmdata\tmemdivmer_t"
+			],
+			[
+				"T",
+				"TRUE\tmacro"
+			],
+			[
+				"MF_UIXTY_T",
+				"MF_UIXTY_TSHD\tmacro"
+			],
+			[
+				"dm_",
+				"dm_onemsalst\tbafhlst_t"
+			],
+			[
+				"dsi",
+				"disp_memarea(machbstart_t *mbsp)\tvoid"
+			],
+			[
+				"ma_f",
+				"ma_freepages\tu64_t"
+			],
+			[
+				"ma_a",
+				"ma_allmsadscnr"
+			],
+			[
+				"ma_",
+				"ma_freepages"
+			],
+			[
+				"meme",
+				"memarea"
+			],
+			[
+				"rf",
+				"rfmnr\tu64_t*"
+			],
+			[
+				"BAF",
+				"BAFH_STUS_ONEM\tmacro"
+			],
+			[
+				"MA_TY",
+				"MA_TYPE_PROC\tmacro"
+			],
+			[
+				"tmp",
+				"tmpnr\tu64_t"
+			],
+			[
+				"M",
+				"MA_TYPE_PROC\tmacro"
+			],
+			[
+				"B",
+				"BAFH_STUS_ONEM\tmacro"
+			],
+			[
+				"r",
+				"rfend\tmsadsc_t**"
+			],
+			[
+				"msta",
+				"mstat\tmsadsc_t*"
+			],
+			[
+				"cont",
+				"continumsadsc_add_bafhlst(memarea_t *mareap, bafhlst_t *bafhp, msadsc_t *fstat, msadsc_t *fend, u64_t fmnr)\tbool_t"
+			],
+			[
+				"f",
+				"fstat\tmsadsc_t*"
+			],
+			[
+				"ma_all",
+				"ma_allmsadscnr\tu64_t"
+			],
+			[
+				"fa",
+				"fstat\tmsadsc_t*"
+			],
+			[
+				"list_add",
+				"list_add(list_h_t *)\tvoid"
+			],
+			[
+				"dm_mdml",
+				"dm_mdmlielst\tbafhlst_t [52]"
+			],
+			[
+				"merl",
+				"merlove_continumsadsc_mareabafh"
+			],
+			[
+				"mer",
+				"merlove_continumsadsc_mareabafh(memarea_t *mareap, msadsc_t *mstat, msadsc_t *mend, u64_t mnr)\tbool_t"
+			],
+			[
+				"con",
+				"continumsadsc_mareabafh_core(memarea_t *mareap, msadsc_t **rfstat, msadsc_t **rfend, u64_t *rfmnr)\tbool_t"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "lminitldr/build/ldrlink.mk",
+			"settings":
+			{
+				"buffer_size": 813,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "include/halinc/halmm.h",
+			"settings":
+			{
+				"buffer_size": 2217,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "kernel/krlpagempol.c",
+			"settings":
+			{
+				"buffer_size": 25655,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "kernel/krlsveopen.c",
+			"settings":
+			{
+				"buffer_size": 3443,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "kernel/krlcpuidle.c",
+			"settings":
+			{
+				"buffer_size": 2519,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "include/halinc/printfk.h",
+			"settings":
+			{
+				"buffer_size": 530,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "lminitldr/ldrkrl/graph.c",
+			"settings":
+			{
+				"buffer_size": 10363,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "script/krnlbuidcmd.S",
+			"settings":
+			{
+				"buffer_size": 1445,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "script/lmemknllink.S",
+			"settings":
+			{
+				"buffer_size": 3665,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "script/lmosemlink.S",
+			"settings":
+			{
+				"buffer_size": 816,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "hal/x86/halinit.c",
+			"settings":
+			{
+				"buffer_size": 3881,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Makefile",
+			"settings":
+			{
+				"buffer_size": 3247,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/boot/grub/grub.cfg",
+			"settings":
+			{
+				"buffer_size": 10962,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 68.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/lmos/lmosem",
+		"/home/lmos/lmosem/drivers",
+		"/home/lmos/lmosem/exckrnl",
+		"/home/lmos/lmosem/include",
+		"/home/lmos/lmosem/kernel",
+		"/home/lmos/lmosem/task"
+	],
+	"file_history":
+	[
+		"/home/lmos/lmosem/task/utask.c",
+		"/home/lmos/lmosem/lminitldr/build/lmosldrsve.lds",
+		"/home/lmos/lmosem/lminitldr/build/lmosldrkrl.lds",
+		"/home/lmos/lmosem/lminitldr/build/lmosldrimh.lds",
+		"/home/lmos/lmosem/Makefile.arm",
+		"/home/lmos/lmosem/Makefile.x86",
+		"/home/lmos/lmosem/lminitldr/build/ldrobjs.mh",
+		"/home/lmos/lmosem/lminitldr/build/krnlbuidcmd.mh",
+		"/home/lmos/lmosem/lminitldr/Makefile",
+		"/home/lmos/lmos-00.08/lminitldr/build/ldrlink.mk",
+		"/home/lmos/lmos-00.08/lminitldr/build/lmosldrimh.lds",
+		"/home/lmos/lmos-00.08/arch/x86_64/include/archgobal_t.h",
+		"/home/lmos/lmos-00.08/arch/x86_64/include/irqdesc_t.h",
+		"/home/lmos/lmos-00.08/arch/x86_64/include/lmosdebug.h",
+		"/home/lmos/lmos-00.08/build/bdvideo.s",
+		"/home/lmos/lmos-00.08/build/bdvideo.i",
+		"/home/lmos/gitTUT/test.c",
+		"/home/lmos/gitTUT/getIndx.c",
+		"/boot/grub/grub.cfg",
+		"/home/lmos/lmos-00.08/arch/x86_64/kernel/bdvideo.c",
+		"/home/lmos/lmos-00.08/arch/x86_64/kernel/arch_x64_init.c",
+		"/home/lmos/lmos-00.08/arch/x86_64/include/type.h",
+		"/home/lmos/lmos-00.08/arch/x86_64/kernel/lmosdebug.c",
+		"/home/lmos/lmos-00.08/arch/x86_64/include/lmosdebug_t.h",
+		"/home/lmos/lmos-00.08/arch/x86_64/include/irqdesc.h",
+		"/home/lmos/lmos-00.08/kernel/knl_maininit.c",
+		"/home/lmos/lmos-00.08/arch/x86_64/kernel/archgobal.c",
+		"/home/lmos/lmos-00.08/arch/x86_64/include/archgobal.h",
+		"/home/lmos/lmos-00.08/arch/x86_64/kernel/irqdesc.c",
+		"/home/lmos/test/4.c",
+		"/home/lmos/MyProject/README.md",
+		"/home/lmos/lmos-00.08/mm/kmalloc.c",
+		"/home/lmos/lmos-00.08/mm/kmempool.c",
+		"/home/lmos/lmos-00.08/lminitldr/build/krnlbuidcmd.mh",
+		"/home/lmos/lmos-00.08/build/vbox.mk",
+		"/home/lmos/lmos-00.08/Makefile",
+		"/home/lmos/lmos-00.08/build/linkinitshell.mk",
+		"/home/lmos/lmos-00.08/build/x86_64krnllink.mk",
+		"/home/lmos/lmos-00.08/build/app.lds",
+		"/home/lmos/lmos-00.08/build/boot.lds",
+		"/home/lmos/lmos-00.08/build/ldrld.lds",
+		"/home/lmos/lmos-00.08/build/kernelld.lds",
+		"/home/lmos/lmos-00.08/lmoself/lmelf.c",
+		"/home/lmos/lmos-00.08/arch/x86_64/include/types.h",
+		"/home/lmos/lmos-00.08/include/buildinc/buildfile.h",
+		"/home/lmos/lmos-00.08/arch/x86_64/include/mcontrol.h",
+		"/home/lmos/lmos-00.08/kernel/memmgr/memarea.c",
+		"/home/lmos/lmos-00.08/kernel/memmgr/memdivmer.c",
+		"/home/lmos/lmos-00.08/lminitldr/Makefile",
+		"/home/lmos/lmos-00.08/lminitldr/build/lmosldrkrl.lds",
+		"/home/lmos/lmos-00.08/lminitldr/build/lmosldrsve.lds",
+		"/home/lmos/lmos-00.08/build/krnlbuidcmd.mh",
+		"/home/lmos/lmos-00.08/script/krnlobjs.S",
+		"/home/lmos/lmos-00.08/lminitldr/build/lmosldrimh.map",
+		"/home/lmos/lmos-00.08/lmoskrlimg/core/file.c",
+		"/home/lmos/lmos-00.08/include/memmgrinc/memmgrinit_t.h",
+		"/home/lmos/lmos-00.08/kernel/memmgr/memmgrinit.c",
+		"/home/lmos/lmos-00.08/include/memmgrinc/memarea_t.h",
+		"/home/lmos/lmos-00.08/kernel/memmgr/msadsc.c",
+		"/home/lmos/lmos-00.08/include/memmgrinc/msadsc_t.h",
+		"/home/lmos/lmos-00.08/lminitldr/include/ldrtype.h",
+		"/home/lmos/lmos-00.08/lmoskrlimg/core/imgcore.c",
+		"/home/lmos/lmos-00.08/lminitldr/build/vgastr.s",
+		"/home/lmos/lmos-00.08/lminitldr/build/chkcpmm.s",
+		"/home/lmos/lmos-00.08/lminitldr/build/ldrobjs.mh",
+		"/home/lmos/lmos-00.08/script/krnlbuidcmd.mh",
+		"/home/lmos/lmos-00.08/build/hdldr.map",
+		"/home/lmos/lmos-00.08/include/memmgrinc/memdivmer_t.h",
+		"/home/lmos/lmos-00.08/build/kvmrlmos.mk",
+		"/home/lmos/lmos-00.08/include/memmgrinc/memarea.h",
+		"/home/lmos/lmos-00.08/arch/x86_64/include/io.h",
+		"/home/lmos/lmos-00.08/include/memmgrinc/memmgrinit.h",
+		"/home/lmos/lmos-00.08/kernel/knl_global.c",
+		"/home/lmos/lmos-00.08/include/kernelinc/knl_global.h",
+		"/home/lmos/lmos-00.08/include/memmgrinc/msadsc.h",
+		"/home/lmos/lmos-00.08/include/memmgrinc/memdivmer.h",
+		"/home/lmos/lmos-00.08/include/memmgrinc/memmgrmctrl.h",
+		"/home/lmos/lmos-00.08/include/memmgrinc/memmgrtypes.h",
+		"/home/lmos/lmos-00.08/arch/x86_64/include/printfk_t.h",
+		"/home/lmos/lmos-00.08/arch/x86_64/include/mmap_t.h",
+		"/home/lmos/lmos-00.08/arch/x86_64/kernel/me820.c",
+		"/home/lmos/lmos-00.08/include/kernelinc/knl_init_t.h",
+		"/home/lmos/lmos-00.08/arch/x86_64/include/list_t.h",
+		"/home/lmos/lmos-00.08/arch/x86_64/boot/hdloader.asm",
+		"/home/lmos/lmos-00.08/kernel/intmgr/intmgrinit.c",
+		"/home/lmos/lmos-00.08/include/intmgrinc/intmgrinit.h",
+		"/home/lmos/lmos-00.08/build/kernel.map",
+		"/home/lmos/lmos-00.08/build/krnllink.mk",
+		"/home/lmos/lmos-00.08/include/kobmgrinc/kobmgrmctrl.h",
+		"/home/lmos/lmos-00.08/include/ifemgrinc/ifemgrinit.h",
+		"/home/lmos/lmos-00.08/include/ifemgrinc/ifemgrinit_t.h",
+		"/home/lmos/lmos-00.08/include/kobmgrinc/kobmgrtypes.h",
+		"/home/lmos/lmos-00.08/include/memmgrinc/memmgriface_t.h",
+		"/home/lmos/lmos-00.08/include/kobmgrinc/kobmgriface_t.h",
+		"/home/lmos/lmos-00.08/include/ifemgrinc/ifemgriface_t.h",
+		"/home/lmos/lmos-00.08/include/ifemgrinc/ifemgriface.h",
+		"/home/lmos/lmos-00.08/include/devmgrinc/devmgriface.h",
+		"/home/lmos/lmos-00.08/include/devmgrinc/devmgriface_t.h",
+		"/home/lmos/lmos-00.08/kernel/knl_init.c",
+		"/home/lmos/lmos-00.08/build/krnlbuidrule.mh",
+		"/home/lmos/lmos-00.08/build/x86_64arch.mk",
+		"/home/lmos/lmos-00.08/include/lmosmctrl.h",
+		"/home/lmos/lmos-00.08/include/lmostypes.h",
+		"/home/lmos/lmos-00.08/arch/x86_64/include/arch_x64_init.h",
+		"/home/lmos/lmos-00.08/arch/x86_64/include/me820.h",
+		"/home/lmos/lmos-00.08/include/kobmgrinc/kobmgrinit_t.h",
+		"/home/lmos/lmos-00.08/include/kobmgrinc/kobmgriface.h",
+		"/home/lmos/lmos-00.08/include/intmgrinc/intmgriface.h",
+		"/home/lmos/lmos-00.08/include/intmgrinc/intmgriface_t.h",
+		"/home/lmos/lmos-00.08/include/intmgrinc/intmgrinit_t.h",
+		"/home/lmos/lmos-00.08/include/kobmgrinc/kobmgrinit.h",
+		"/home/lmos/lmos-00.08/include/devmgrinc/devmgrinit_t.h",
+		"/home/lmos/lmos-00.08/include/devmgrinc/devmgrinit.h",
+		"/home/lmos/lmos-00.08/include/kernelinc/knl_error_t.h",
+		"/home/lmos/lmos-00.08/include/devmgrinc/devmgrtypes.h",
+		"/home/lmos/lmos-00.08/include/devmgrinc/devmgrmctrl.h",
+		"/home/lmos/lmos-00.08/include/ifemgrinc/ifemgrtypes.h",
+		"/home/lmos/lmos-00.08/include/ifemgrinc/ifemgrmctrl.h",
+		"/home/lmos/lmos-00.08/include/intmgrinc/intmgrtypes.h",
+		"/home/lmos/lmos-00.08/kernel/memmgr/me820kex.c",
+		"/home/lmos/lmos-00.08/include/intmgrinc/intmgrmctrl.h",
+		"/home/lmos/lmos-00.08/kernel/memmgr/memmgriface.c",
+		"/home/lmos/lmos-00.08/include/memmgrinc/memmgrinit.c",
+		"/home/lmos/lmos-00.08/kernel/devmgr/devmgrinit.c",
+		"/home/lmos/lmos-00.08/kernel/ifemgr/ifemgrinit.c",
+		"/home/lmos/lmos-00.08/kernel/kobmgr/kobmgrinit.c",
+		"/home/lmos/lmos-00.08/include/devmgrinc/devmgrinit.c",
+		"/home/lmos/.config/sublime-text-3/Packages/User/SublimeClang.sublime-settings"
+	],
+	"find":
+	{
+		"height": 31.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"getIndx",
+			"init_kobmgr",
+			"init_intmgr"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 11,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "lminitldr/build/ldrlink.mk",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 813,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								553,
+								553
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Makefile/Makefile.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "include/halinc/halmm.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2217,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2217,
+								2217
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 584.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "kernel/krlpagempol.c",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 25655,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3282,
+								3282
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2388.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "kernel/krlsveopen.c",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3443,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1266,
+								1266
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 506.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "kernel/krlcpuidle.c",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2519,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								830,
+								830
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "include/halinc/printfk.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 530,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								530,
+								530
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "lminitldr/ldrkrl/graph.c",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 10363,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2048,
+								2048
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1299.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "script/krnlbuidcmd.S",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1445,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								791,
+								791
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/R/R.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "script/lmemknllink.S",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3665,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								831,
+								831
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/R/R.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 19.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "script/lmosemlink.S",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 816,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								816,
+								816
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/R/R.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "hal/x86/halinit.c",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3881,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								314,
+								314
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "Makefile",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3247,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2171,
+								2171
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Makefile/Makefile.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "/boot/grub/grub.cfg",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 10962,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1078,
+								1078
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 460.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 31.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "lmosem.sublime-project",
+	"replace":
+	{
+		"height": 58.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 262.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

@@ -136,7 +136,7 @@ void testobjsmgr()
             printfk("objs alloc adsz[%x] sz:%x adr:%x\n\r",i,adsz[i].sz,adsz[i].adr);
             adrbytp=(u8_t*)adsz[i].adr;
             bytval=(u8_t)(adsz[i].adr&0xff);
-            for(int k=0;k<adsz[i].sz;k++)
+            for(size_t k=0;k<adsz[i].sz;k++)
             {
                 adrbytp[k]=bytval;
             }
