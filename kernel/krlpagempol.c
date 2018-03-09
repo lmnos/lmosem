@@ -188,7 +188,7 @@ void testpagemgr()
 void init_krlpagempol()
 {
     kmempool_t_init(&oskmempool);
-    //testobjsmgr();
+    //testpagemgr();
     return;
 }
 
@@ -209,6 +209,7 @@ void kmempool_t_init(kmempool_t* initp)
 #ifdef CFG_X86_PLATFORM
     for(uint_t i=0;i<PHYMSA_MAX;i++)
     {
+    	kprint("kmempool_t_init head:%x %d\n",(uint_t)&initp->mp_msalsthead[i],i);
         list_init(&initp->mp_msalsthead[i]);
     } 
 #endif
@@ -847,6 +848,7 @@ void msadsc_add_kmempool(kmempool_t* kmplp,msadsc_t* msa,uint_t relpnr)
     {
         system_error("msadsc_add_kmempool fail\n");
     }
+    kprint("Start msadsc_add_kmempool kmplp:%x msa:%x relpnr:%d\n",kmplp,msa,relpnr);
     cpuflg_t cpuflg;
     hal_spinlock_saveflg_cli(&kmplp->mp_lock,&cpuflg);
     if((PHYMSA_MAX-1)<=relpnr)
@@ -856,6 +858,8 @@ void msadsc_add_kmempool(kmempool_t* kmplp,msadsc_t* msa,uint_t relpnr)
     else
     {
         list_add(&msa->md_list,&kmplp->mp_msalsthead[relpnr]);
+        kprint("msadsc_add_kmempool: msa2 %x adr:%x head:%x relpnr:%d\n",
+        	msa,msa->md_phyadrs.paf_padrs<<12,(uint_t)&kmplp->mp_msalsthead[relpnr],relpnr);
     }
     hal_spinunlock_restflg_sti(&kmplp->mp_lock,&cpuflg);
     return;
@@ -867,6 +871,7 @@ msadsc_t* msadsc_del_kmempool(kmempool_t* kmplp,uint_t relpnr,adr_t fradr)
     {
         return NULL;
     }
+    kprint("Start msadsc_del_kmempool kmplp:%x fradr:%x relpnr:%d\n",kmplp,fradr,relpnr);
     msadsc_t* tmpmsa=NULL,*retmsa=NULL;
     list_h_t* tmplst;
     cpuflg_t cpuflg;
@@ -876,6 +881,7 @@ msadsc_t* msadsc_del_kmempool(kmempool_t* kmplp,uint_t relpnr,adr_t fradr)
         list_for_each(tmplst,&kmplp->mp_msalsthead[PHYMSA_MAX-1]);
         {
             tmpmsa=list_entry(tmplst,msadsc_t,md_list);
+            kprint("msadsc_del_kmempool tmpmsa:%x adr:%x head:%x\n",tmpmsa,tmpmsa->md_phyadrs.paf_padrs<<12,&kmplp->mp_msalsthead[relpnr]);
             if(fradr==(tmpmsa->md_phyadrs.paf_padrs<<12))
             {
                 list_del(&tmpmsa->md_list);
@@ -889,6 +895,8 @@ msadsc_t* msadsc_del_kmempool(kmempool_t* kmplp,uint_t relpnr,adr_t fradr)
         list_for_each(tmplst,&kmplp->mp_msalsthead[relpnr]);
         {
             tmpmsa=list_entry(tmplst,msadsc_t,md_list);
+            kprint("msadsc_del_kmempool tmpmsa2:%x adr:%x head:%x relpnr:%d\n",
+            	tmpmsa,tmpmsa->md_phyadrs.paf_padrs<<12,(uint_t)&kmplp->mp_msalsthead[relpnr],relpnr);
             if(fradr==(tmpmsa->md_phyadrs.paf_padrs<<12))
             {
                 list_del(&tmpmsa->md_list);
@@ -899,6 +907,7 @@ msadsc_t* msadsc_del_kmempool(kmempool_t* kmplp,uint_t relpnr,adr_t fradr)
     }
     retmsa=NULL;
 ret_step:
+	kprint("msadsc_del_kmempool retmsa:%x\n",retmsa);
     hal_spinunlock_restflg_sti(&kmplp->mp_lock,&cpuflg);  
     return retmsa; 
 }
@@ -972,12 +981,14 @@ return_step:
 #endif
 
 #ifdef CFG_X86_PLATFORM
-    kmempool_t* kmplp=&oskmempool;
-    uint_t relpnr=frsz>>12;
-    msadsc_t* retmsa=NULL;
-    retmsa=msadsc_del_kmempool(kmplp,relpnr,fradr);
-    if(NULL==retmsa)
+    kmempool_t* kmplp = &oskmempool;
+    uint_t relpnr = frsz >> PAGE_SZRBIT;
+    msadsc_t* retmsa = NULL;
+    retmsa = msadsc_del_kmempool(kmplp,relpnr,fradr);
+    kprint("msadsc_del_kmempool kmplp:%x relpnr:%d fradr:%x\n",kmplp,relpnr,fradr);
+    if(NULL == retmsa)
     {
+    	kprint("retmsa:%x\n",retmsa);
         return FALSE;
     }
     return mm_merge_pages(&lmos_memmgrob,retmsa,relpnr);
@@ -1081,6 +1092,7 @@ adr_t kmempool_pages_new(size_t msize)
 bool_t kmempool_pages_delete(adr_t fradr,size_t frsz)
 {
     size_t sz=PAGE_ALIGN(frsz);
+    kprint("kmempool_pages_delete sz:%d\n",sz);
 #ifdef CFG_S3C2440A_PLATFORM
     if(sz>KPMPORHALM)
     {

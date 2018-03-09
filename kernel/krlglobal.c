@@ -23,6 +23,7 @@ krlsvetabl_read,krlsvetabl_write,
 krlsvetabl_ioctrl,krlsvetabl_lseek,
 krlsvetabl_time};
 KRL_DEFGLOB_VARIABLE(devtable_t,osdevtable);
+KRL_DEFGLOB_VARIABLE(iocheblkdsc_t,osiocheblk);
 KRL_DEFGLOB_VARIABLE(drventyexit_t,osdrvetytabl)[]={
 systick_entry,/*uart_entry,rtc_entry,rfs_entry,*/
 NULL};

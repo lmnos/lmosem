@@ -21,6 +21,7 @@
 #define OBJS_ALIGN(x) ALIGN(x,4) 
 #define PHYMSA_MAX 512
 #define PAGE_SIZE 0x1000
+#define PAGE_SZRBIT (12)
 typedef struct s_PGLMAP
 {
     adr_t            pgl_start;
