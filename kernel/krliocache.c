@@ -38,7 +38,7 @@ void iocheblk_t_init(iocheblk_t* initp)
 void init_krliocacheblk()
 {
 	krliocheblkdsc_t_init(&osiocheblk);
-	krliocheblk_test();
+	//krliocheblk_test();
 	return;
 }
 
@@ -187,9 +187,10 @@ bool_t krliocheblk_free(iocheblkdsc_t* icblkdsc,uint_t icblknr,uint_t icblksz)
 
 void krliocheblk_test()
 {
-	/*
+	
 	iocheblk_t* icb=NULL;
-	for (int i = 1; i < 2; ++i)
+	int count =1000;
+	for (int i = 1; i < count; ++i)
 	{
 		icb = krliocheblk_alloc(&osiocheblk,i,ICBLK_SIZE*2);
 		if(NULL == icb)
@@ -199,7 +200,7 @@ void krliocheblk_test()
 		kprint("icb_lblknr:%d icb_buffer:%x icb_bufsz:%d\n",icb->icb_lblknr,(uint_t)icb->icb_buffer,icb->icb_bufsz);
 	}
 
-	for (int i = 1; i < 2; ++i)
+	for (int i = 1; i < count; ++i)
 	{
 		bool_t rets = krliocheblk_free(&osiocheblk,i,ICBLK_SIZE*2);
 		if(FALSE == rets)
@@ -208,24 +209,19 @@ void krliocheblk_test()
 		}
 		kprint("krliocheblk_free OK\n");
 	}
-	hal_sysdie("krliocheblk_test  ok");*/
+	hal_sysdie("krliocheblk_test  ok");
+	/*kprint("LMOSEM:\n");
 	kprint("LMOSEM:\n");
 	kprint("LMOSEM:\n");
 	kprint("LMOSEM:\n");
 	kprint("LMOSEM:\n");
 	kprint("LMOSEM:\n");
-	kprint("LMOSEM:\n");
-	kprint("LMOSEM:\n");
-	kprint("LMOSEM:\n");
-	kprint("LMOSEM:\n");
-	kprint("LMOSEM:\n");
-	
 	size_t msz=ICBLK_SIZE;
 	adr_t adrr=krlnew(msz);
-	kprint("adrr:%x\n",adrr);
+	kprint("krlnew adrr:%x\n",adrr);
 	if(krldelete(adrr,msz)==FALSE)
 	{
 		hal_sysdie("krldelete  err");
 	}
-	hal_sysdie("krliocheblk_test  ok");
+	hal_sysdie("krliocheblk_test  ok");*/
 }

@@ -46,6 +46,13 @@ typedef struct s_MPLHEAD
     pglmap_t*       mh_pmap;
 }mplhead_t;
 
+typedef struct s_MSAHEAD
+{
+    uint_t mlh_nr;
+    list_h_t mlh_msalst;
+}msahead_t;
+
+
 typedef struct s_KMEMPOOL
 {
     spinlock_t      mp_lock;
@@ -61,7 +68,7 @@ typedef struct s_KMEMPOOL
     mplhead_t*      mp_pgmplmhcach;
     mplhead_t*      mp_obmplmhcach;
 #ifdef CFG_X86_PLATFORM
-    list_h_t        mp_msalsthead[PHYMSA_MAX]; 
+    msahead_t       mp_msalsthead[PHYMSA_MAX]; 
 #endif
 }kmempool_t;
 
