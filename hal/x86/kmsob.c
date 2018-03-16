@@ -1116,7 +1116,7 @@ PUBLIC void  test_kmsob()
 	kprint("我笃信优秀的操作系统,起始于精湛的内存管理......\n");
 	for(uint_t n=0;n<2048;n++,sz++)
 	{
-	for(uint_t i=0;i<256;i++)
+	for(uint_t i=0;i<5;i++)
 	{
 		stsc=x86_rdtsc();
 		ptr=kmsob_new(sz);

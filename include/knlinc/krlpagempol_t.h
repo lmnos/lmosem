@@ -21,6 +21,7 @@
 #define OBJS_ALIGN(x) ALIGN(x,4) 
 #define PHYMSA_MAX 512
 #define PAGE_SIZE 0x1000
+#define PAGE_SZRBIT (12)
 typedef struct s_PGLMAP
 {
     adr_t            pgl_start;
@@ -45,6 +46,13 @@ typedef struct s_MPLHEAD
     pglmap_t*       mh_pmap;
 }mplhead_t;
 
+typedef struct s_MSAHEAD
+{
+    uint_t mlh_nr;
+    list_h_t mlh_msalst;
+}msahead_t;
+
+
 typedef struct s_KMEMPOOL
 {
     spinlock_t      mp_lock;
@@ -60,7 +68,7 @@ typedef struct s_KMEMPOOL
     mplhead_t*      mp_pgmplmhcach;
     mplhead_t*      mp_obmplmhcach;
 #ifdef CFG_X86_PLATFORM
-    list_h_t        mp_msalsthead[PHYMSA_MAX]; 
+    msahead_t       mp_msalsthead[PHYMSA_MAX]; 
 #endif
 }kmempool_t;
 

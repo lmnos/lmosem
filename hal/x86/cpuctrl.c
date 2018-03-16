@@ -508,6 +508,8 @@ void hal_spinunlock_restflg_sti(spinlock_t* lock, cpuflg_t* cpuflg)
     return;
 }
 
+
+
 void knl_spinlock_init(spinlock_t* lock)
 {
     lock->lock = 0;

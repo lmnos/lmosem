@@ -24,6 +24,7 @@ PUBLIC LKINIT void init_memmgr()
 	init_merlove_mem();
 	init_memmgrob();
 	init_kmsob();
+	//test_divsion_pages();
 	//test_kmsob();
 	//free_all_mchkstuc();
     //free_all_kobcks();

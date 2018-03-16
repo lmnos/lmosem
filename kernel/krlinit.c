@@ -12,7 +12,7 @@ void init_krl()
 	init_krldevice();
     init_krldriver();
 	init_krlsched();
-    
+    init_krliocacheblk();
     init_ktime();
     init_task();
     init_krlcpuidle();

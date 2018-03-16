@@ -19,6 +19,9 @@
 #include "krlwaitlist_t.h"
 #include "krlcpuidle_t.h"
 #include "krldevice_t.h"
+#include "krlspinlock_t.h"
+#include "krliocache_t.h"
+
 
 #include "krlservice_t.h"
 #include "krlsvemm_t.h"

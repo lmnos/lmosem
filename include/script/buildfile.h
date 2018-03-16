@@ -9,8 +9,8 @@
 #define BUILD_HALY_OBJS init.o kernel.o intallocator.o lmosemhal_start.o halinit.o halglobal.o halmm.o\
                         halintupt.o platform.o cpuctrl.o bdvideo.o lmosimgfs.o printfk.o kvirtadrmap.o\
                         memmgrinit.o msadsc.o memarea.o memdivmer.o kmsob.o sgdtidt.o  i8259.o
-#define BUILD_KRNL_OBJS krlinit.o krlglobal.o krlintupt.o\
-                        krlsem.o krlwaitlist.o\
+#define BUILD_KRNL_OBJS krlinit.o krlglobal.o krlintupt.o krlspinlock.o\
+                        krlsem.o krlwaitlist.o krliocache.o\
                         krlmm.o krlpagempol.o krlobjsmpol.o\
                         krlsched.o krltime.o krlobjnode.o krlthread.o\
                         krldevice.o krlservice.o krlsvemm.o\

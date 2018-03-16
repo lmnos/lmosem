@@ -188,9 +188,20 @@ void testpagemgr()
 void init_krlpagempol()
 {
     kmempool_t_init(&oskmempool);
-    //testobjsmgr();
+    //testpagemgr();
     return;
 }
+
+void msahead_t_init(msahead_t* initp)
+{
+    if(NULL == initp)
+    {
+        return;
+    }
+    initp->mlh_nr = 0;
+    list_init(&initp->mlh_msalst);
+}
+
 
 void kmempool_t_init(kmempool_t* initp)
 {
@@ -209,7 +220,7 @@ void kmempool_t_init(kmempool_t* initp)
 #ifdef CFG_X86_PLATFORM
     for(uint_t i=0;i<PHYMSA_MAX;i++)
     {
-        list_init(&initp->mp_msalsthead[i]);
+        msahead_t_init(&initp->mp_msalsthead[i]);
     } 
 #endif
     return;
@@ -841,6 +852,7 @@ mplhead_t* kmemplpg_retn_mplhead(kmempool_t* kmplockp,size_t msize)
 }
 #endif
 
+#ifdef CFG_X86_PLATFORM
 void msadsc_add_kmempool(kmempool_t* kmplp,msadsc_t* msa,uint_t relpnr)
 {
     if(NULL==kmplp||NULL==msa||1>relpnr)
@@ -849,13 +861,15 @@ void msadsc_add_kmempool(kmempool_t* kmplp,msadsc_t* msa,uint_t relpnr)
     }
     cpuflg_t cpuflg;
     hal_spinlock_saveflg_cli(&kmplp->mp_lock,&cpuflg);
-    if((PHYMSA_MAX-1)<=relpnr)
+    if((PHYMSA_MAX-1) <= relpnr)
     {
-        list_add(&msa->md_list,&kmplp->mp_msalsthead[PHYMSA_MAX-1]);
+        list_add(&msa->md_list,&kmplp->mp_msalsthead[(PHYMSA_MAX-1)].mlh_msalst);
+        kmplp->mp_msalsthead[(PHYMSA_MAX-1)].mlh_nr++;
     }
     else
     {
-        list_add(&msa->md_list,&kmplp->mp_msalsthead[relpnr]);
+        list_add(&msa->md_list,&kmplp->mp_msalsthead[relpnr].mlh_msalst);
+        kmplp->mp_msalsthead[relpnr].mlh_nr++;
     }
     hal_spinunlock_restflg_sti(&kmplp->mp_lock,&cpuflg);
     return;
@@ -871,28 +885,31 @@ msadsc_t* msadsc_del_kmempool(kmempool_t* kmplp,uint_t relpnr,adr_t fradr)
     list_h_t* tmplst;
     cpuflg_t cpuflg;
     hal_spinlock_saveflg_cli(&kmplp->mp_lock,&cpuflg);
-    if((PHYMSA_MAX-1)<=relpnr)
+
+    if((PHYMSA_MAX-1) <= relpnr)
     {
-        list_for_each(tmplst,&kmplp->mp_msalsthead[PHYMSA_MAX-1]);
+        list_for_each(tmplst,&kmplp->mp_msalsthead[(PHYMSA_MAX-1)].mlh_msalst)
         {
-            tmpmsa=list_entry(tmplst,msadsc_t,md_list);
-            if(fradr==(tmpmsa->md_phyadrs.paf_padrs<<12))
+            tmpmsa = list_entry(tmplst,msadsc_t,md_list);
+            if((retmsa->md_phyadrs.paf_padrs<<12)==fradr)
             {
                 list_del(&tmpmsa->md_list);
                 retmsa=tmpmsa;
+                kmplp->mp_msalsthead[(PHYMSA_MAX-1)].mlh_nr--;
                 goto ret_step;
             }
         }
     }
     else
     {
-        list_for_each(tmplst,&kmplp->mp_msalsthead[relpnr]);
+        list_for_each(tmplst,&kmplp->mp_msalsthead[relpnr].mlh_msalst)
         {
-            tmpmsa=list_entry(tmplst,msadsc_t,md_list);
-            if(fradr==(tmpmsa->md_phyadrs.paf_padrs<<12))
+            tmpmsa = list_entry(tmplst,msadsc_t,md_list);
+            if((tmpmsa->md_phyadrs.paf_padrs<<12)==fradr)
             {
                 list_del(&tmpmsa->md_list);
                 retmsa=tmpmsa;
+                kmplp->mp_msalsthead[relpnr].mlh_nr--;
                 goto ret_step;
             }
         }
@@ -902,6 +919,7 @@ ret_step:
     hal_spinunlock_restflg_sti(&kmplp->mp_lock,&cpuflg);  
     return retmsa; 
 }
+#endif
 
 adr_t kmempool_pages_core_new(size_t msize)
 {
@@ -972,11 +990,11 @@ return_step:
 #endif
 
 #ifdef CFG_X86_PLATFORM
-    kmempool_t* kmplp=&oskmempool;
-    uint_t relpnr=frsz>>12;
-    msadsc_t* retmsa=NULL;
-    retmsa=msadsc_del_kmempool(kmplp,relpnr,fradr);
-    if(NULL==retmsa)
+    kmempool_t* kmplp = &oskmempool;
+    uint_t relpnr = frsz >> PAGE_SZRBIT;
+    msadsc_t* retmsa = NULL;
+    retmsa = msadsc_del_kmempool(kmplp,relpnr,fradr);
+    if(NULL == retmsa)
     {
         return FALSE;
     }
@@ -1087,12 +1105,13 @@ bool_t kmempool_pages_delete(adr_t fradr,size_t frsz)
         return kmempool_page_delete_callhalmm(fradr,sz);
     }
 #endif
+#ifdef CFG_X86_PLATFORM
     return kmempool_pages_core_delete(fradr,sz);
+#endif
 }
 
 adr_t kmempool_onsize_new(size_t msize)
 {
-
 
     if(msize>OBJSORPAGE)
     {
