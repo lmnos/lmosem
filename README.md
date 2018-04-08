@@ -1,4 +1,4 @@
-# LMOSE
+# LMOSEM
 
 LMOSEM（liberty，madness，operating，system，embedded）是一个完全从第一行引导代码开始编写，基于ARM平台，支持多进程、多CPU、内存管理、文件与设备管理的全32位操作系统内核.
 
