@@ -28,3 +28,4 @@ KRL_DEFGLOB_VARIABLE(drventyexit_t,osdrvetytabl)[]={
 systick_entry,/*uart_entry,rtc_entry,rfs_entry,*/
 NULL};
 //
+//

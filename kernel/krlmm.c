@@ -11,7 +11,7 @@ void init_krlmm()
 
     return; 
 }
-
+// mm
 adr_t krlnew(size_t mmsize)
 {
     if(mmsize==MALCSZ_MIN||mmsize>MALCSZ_MAX)
