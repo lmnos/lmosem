@@ -12,7 +12,12 @@ void init_krl()
 	init_krldevice();
     init_krldriver();
 	init_krlsched();
+
+#ifdef CFG_X86_PLATFORM
     init_krliocacheblk();
+#endif
+
+
     init_ktime();
     init_task();
     init_krlcpuidle();

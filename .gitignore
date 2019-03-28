@@ -1,0 +1,6 @@
+*.o
+*.s
+*.mki
+*.i
+/.vscode
+*.btoj

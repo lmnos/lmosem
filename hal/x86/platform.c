@@ -38,7 +38,7 @@ void init_paltform()
     return;
 }
 
-#ifdef CFG_S3C2440_PLATFORM
+#ifdef CFG_S3C2440A_PLATFORM
 LKHEAD_T void s3c2440mmu_init()
 {
     uint_t paddr=0;

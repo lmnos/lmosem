@@ -255,10 +255,6 @@ void krlschdclass_add_thread(thread_t* thdp)
     return;
 }
 
-#ifdef CFG_S3C2440A_PLATFORM
-#undef  TNCCALL
-#define TNCCALL
-#endif
 
 TNCCALL void __to_new_context(thread_t* next,thread_t* prev)
 {

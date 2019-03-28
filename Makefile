@@ -18,6 +18,9 @@ IMGTOVDI = qemu-img convert -f raw -O vdi
 IMGTOVMDK = qemu-img convert -f raw -O vmdk
 MAKE = make
 X86BARD = -f ./Makefile.x86
+ARM_BARD = -f ./Makefile.arm
+BOARD_PLATFORM = $(ARM_BARD)
+#BOARD_PLATFORM = $(X86BARD)
 
 VVMRLMOSFLGS = -C $(BUILD_PATH) -f vbox.mkf
 
@@ -56,8 +59,18 @@ LKIMG_INFILE = $(LMOSLDRSVE) $(LMOSLDRKRL) $(KRNLEXCIMG) $(SHELEXCIMG) $(FONTFIL
 build: clean print all
 
 all:
+	$(MAKE) $(BOARD_PLATFORM)
+	@echo '恭喜我，系统编译构建完成！ ^_^'
+	
+x86os:
+	#OS_PLATFORM_DEF=CFG_X86_PLATFORM
 	$(MAKE) $(X86BARD)
 	@echo '恭喜我，系统编译构建完成！ ^_^'
+arm32os:
+	#OS_PLATFORM_DEF=CFG_S3C2440A_PLATFORM
+	$(MAKE) $(ARM_BARD)
+	@echo '恭喜我，系统编译构建完成！ ^_^'
+	
 clean:
 	$(CD) $(BUILD_PATH); $(RM) -f *.o *.bin *.i *.krnl *.s *.map *.lib *.btoj *.vdi *.elf *vmdk *.lds *.mk *.mki krnlobjs.mh
 	$(CD) $(EXKNL_PATH); $(RM) -f *.o *.bin *.i *.krnl *.s *.map *.lib *.btoj *.vdi *.elf *vmdk *.lds *.mk *.mki krnlobjs.mh
