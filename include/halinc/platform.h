@@ -7,7 +7,7 @@
 #define _PLATFORM_H
 void init_paltform();
 
-#ifdef CFG_S3C2440_PLATFORM
+#ifdef CFG_S3C2440A_PLATFORM
 LKHEAD_T void s3c2440mmu_init();
 LKHEAD_T void s3c2440mmu_invalid_dicache();
 LKHEAD_T void s3c2440mmu_set_domain(u32_t domain);

@@ -36,7 +36,7 @@
 #define NF_FLG 0x4
 
 
-#ifdef CFG_S3C244A_PLATFORM
+#ifdef CFG_S3C2440A_PLATFORM
 typedef struct s_STKPARAME
 {
     reg_t rvs0;    

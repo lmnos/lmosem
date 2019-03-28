@@ -7,7 +7,7 @@
 #define _PLATFORM_T_H
 
 
-#ifdef CFG_S3C2440_PLATFORM
+#ifdef CFG_S3C2440A_PLATFORM
 
 
 #define CPUCORE_MAX 1

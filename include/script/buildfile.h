@@ -38,7 +38,8 @@
 #define KERNL_BINF_FILE lmosemkrnl.bin
 
 
-#else
+#endif
+#ifdef CFG_S3C2440A_PLATFORM
 
 #define BUILD_HALY_OBJS init.o lmosemhal_start.o interrupt.o\
                         intabtdistr.o\
@@ -54,7 +55,7 @@
                         krldevice.o krlservice.o krlsvemm.o\
                         krlsvethread.o krlsveopen.o krlsveclose.o\
                         krlsveread.o krlsvewrite.o krlsveioctrl.o\
-                        krlsvelseek.o krlcpuidle.o task.o
+                        krlsvelseek.o krlcpuidle.o task.o 
 #define BUILD_MEMY_OBJS
 #define BUILD_FSYS_OBJS
 #define BUILD_DRIV_OBJS drvtick.o drvuart.o drvrtc.o drvrfs.o

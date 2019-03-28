@@ -5,9 +5,11 @@
 
 #include "config.h"
 
-#ifdef CFG_X86_PLATFORM
 #include "platform_t.h"
 #include "buildfile.h"
+
+#ifdef CFG_X86_PLATFORM
+
 ENTRY(_start)
 OUTPUT_ARCH(i386)
 OUTPUT_FORMAT(elf32-i386)
@@ -74,8 +76,7 @@ SECTIONS
 }
 
 #else
-INPUT(LINKR_IPUT_FILE)
-OUTPUT(LINKR_OPUT_FILE)
+
 OUTPUT_FORMAT("elf32-littlearm", "elf32-littlearm", "elf32-littlearm")
 OUTPUT_ARCH(arm)
 ENTRY(_start)

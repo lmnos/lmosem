@@ -16,7 +16,7 @@ MKIMAGE =mkimage
 SUPERUSER =sudo 
 DKAPP =./dnw2 
 DKAPFLAGES = lmosemkrnl.bin
-PREMENTMFLGS = -C $(BUILD_PATH) -f pretreatment.mk
+PREMENTMFLGS = -C $(BUILD_PATH) -f pretreatment.mkf
 ARMHALYMFLGS = -C $(BUILD_PATH) -f lmosemhal.mk
 ARMKRNLMFLGS = -C $(BUILD_PATH) -f lmosemkrl.mk
 ARMDRIVMFLGS = -C $(BUILD_PATH) -f lmosemdrv.mk
@@ -35,6 +35,7 @@ DSKIMG =flash.img
 build: clean print all
 
 all:
+
 	$(MAKE) $(PREMENTMFLGS)
 	$(MAKE) $(ARMHALYMFLGS)
 	$(MAKE) $(ARMKRNLMFLGS)

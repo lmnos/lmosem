@@ -5,7 +5,7 @@ LMOSEM（liberty，madness，operating，system，embedded）是一个完全从�
 LMOSEM总体上分为三大层：HAL层（针对ARM体系，方便移植）、内核功能层（实现内核服务：其中有内存管理、进程管理、驱动模型等）、接口层（提供应用程序接口).
 
 
-若要建行开发：
+若要进行开发：
 
 1. 请clone本代码仓库
 2. 安装ARM-GCC交叉编译工具
@@ -15,3 +15,17 @@ LMOSEM总体上分为三大层：HAL层（针对ARM体系，方便移植）、�
 # LMOS社区
 
 http://lmoskernel.cn
+  
+编译说明  
+	进行两个宏切换  
+1.Makefile  BOARD_PLATFORM  默认为ARM平台  
+	
+	X86BARD = -f ./Makefile.x86  
+	ARM_BARD = -f ./Makefile.arm  
+	BOARD_PLATFORM = $(ARM_BARD)  
+	#BOARD_PLATFORM = $(X86BARD)  
+   
+2.include\config.h  
+
+	1.#define CFG_S3C2440A_PLATFORM  
+	2.//#define CFG_X86_PLATFORM  

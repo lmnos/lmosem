@@ -7,7 +7,7 @@
 #include "lmosemtypes.h"
 #include "lmosemmctrl.h"
 
-#ifdef CFG_S3C2440_PLATFORM
+#ifdef CFG_S3C2440A_PLATFORM
 void hal_disable_fiq()
 {
     __asm__ __volatile__(
